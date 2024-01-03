@@ -1,6 +1,7 @@
 # Chat App
 
 Chat App is a real-time messaging application that allows users to communicate seamlessly. It's built with Express, MongoDB, Socket.io, JWT, and ReactJS.
+Also, the Chat App will offer video call facility along with the text to speech and speech to text conversion using OpenAI API
 
 ## Project Structure
 
@@ -35,7 +36,13 @@ Chat App is a real-time messaging application that allows users to communicate s
     JWT_SECRET=<your-secret-key>
     ```
 
-5. Start the API server:
+5. For the OpenAI `api` key, register on OpenAI and generate the secrete key there 
+
+    ```env
+    OpenAI_SECRET_KEY=<your-OpenAI-secret-key>
+    ```    
+
+6. Start the API server:
 
     ```bash
     node index
