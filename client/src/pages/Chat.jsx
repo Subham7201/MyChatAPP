@@ -149,55 +149,6 @@ export default function Chat() {
 
   const messagesWithoutDupes = uniqBy(messages, "_id");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <div className="flex h-screen" style={{ backgroundImage: 'url("images/img_untitleddesign.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div className="bg-white w-1/3 flex flex-col sidebar">
