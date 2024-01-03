@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^1.6.3",
+    "global": "^4.4.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "17.0.2",
@@ -16,6 +17,7 @@
     "react-router-dom": "6.0.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.0",
+    "simple-peer": "^9.11.1",
     "socket.io-client": "^4.7.2",
     "web-vitals": "^2.1.0"
   },

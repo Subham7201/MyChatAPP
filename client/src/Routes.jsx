@@ -1,6 +1,7 @@
 import RegisterAndLoginForm from "./pages/RegisterAndLoginForm.jsx"
 import {useContext} from "react";
 import {UserContext} from "./UserContext.jsx";
+import VideoCallComponent from "./pages/VideoCall.jsx";
 import Chat from "./pages/Chat";
 
 export default function Routes() {
