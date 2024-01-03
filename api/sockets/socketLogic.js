@@ -2,6 +2,8 @@
 const Message = require('../models/Message')
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 dotenv.config();
 const jwtSecret = process.env.JWT_SECRET
@@ -53,6 +55,24 @@ function configureSocket(socket, io) {
                 _id: messageDoc._id,
             });
         }
+    });
+
+    socket.on('initiateVideoCall', ({ recipient }) => {
+        const callRequestId = uuidv4(); // Use UUID to generate a unique call request ID
+        io.to(recipient).emit('incomingVideoCall', {
+            sender: socket.userId,
+            recipient,
+            callRequestId,
+        });
+    });
+
+    socket.on('answerVideoCall', ({ recipient, callRequestId, answer }) => {
+        io.to(recipient).emit('videoCallAnswered', {
+            sender: socket.userId,
+            recipient,
+            callRequestId,
+            answer,
+        });
     });
 
     // read username and id from the cookie for this connection

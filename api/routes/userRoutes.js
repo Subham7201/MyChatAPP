@@ -69,6 +69,48 @@ router.post('/register', async (req, res) => {
     }
 });
 
+// Existing routes...
+
+// Initiate a video call
+router.post('/initiateVideoCall', async (req, res) => {
+    try {
+        const { recipient } = req.body;
+        const callRequestId = uuidv4(); // Use UUID to generate a unique call request ID
+
+        // Emit socket event to initiate the video call
+        io.to(recipient).emit('incomingVideoCall', {
+            sender: req.user.userId, // Assuming you have middleware to get user data from token
+            recipient,
+            callRequestId,
+        });
+
+        res.json({ message: 'Video call initiated successfully' });
+    } catch (error) {
+        console.error('Error initiating video call:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// Answer a video call
+router.post('/answerVideoCall', async (req, res) => {
+    try {
+        const { recipient, callRequestId, answer } = req.body;
+
+        // Emit socket event to answer the video call
+        io.to(recipient).emit('videoCallAnswered', {
+            sender: req.user.userId, // Assuming you have middleware to get user data from token
+            recipient,
+            callRequestId,
+            answer,
+        });
+
+        res.json({ message: 'Video call answered successfully' });
+    } catch (error) {
+        console.error('Error answering video call:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 // ... (any other user routes you may have)
 
 module.exports = router;
