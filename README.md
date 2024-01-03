@@ -12,7 +12,7 @@ Chat App is a real-time messaging application that allows users to communicate s
 1. Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Subham7201/MyChatAPP.git
     ```
 
 2. Navigate to the API directory:
@@ -30,7 +30,7 @@ Chat App is a real-time messaging application that allows users to communicate s
 4. Create a `.env` file in the `api` directory and configure:
 
     ```env
-    PORT=3001
+    PORT=<your-port>
     MONGODB_URI=<your-mongodb-uri>
     JWT_SECRET=<your-secret-key>
     ```
