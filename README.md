@@ -12,7 +12,7 @@ Chat App is a real-time messaging application that allows users to communicate s
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Subham7201/MyChatAPP.git
+    git clone [https://github.com/Subham7201/MyChatAPP.git]https://github.com/Subham7201/MyChatAPP.git
     ```
 
 2. Navigate to the API directory:
