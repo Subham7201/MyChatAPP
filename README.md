@@ -1,7 +1,6 @@
 # Chat App
 
-Chat App is a real-time messaging application that allows users to communicate seamlessly. It's built with Express, MongoDB, Socket.io, JWT, and ReactJS.
-Also, the Chat App will offer video call facility along with the text to speech and speech to text conversion using OpenAI API
+Chat App is a real-time messaging application that allows users to communicate seamlessly. It's built with a robust stack including Express, MongoDB, Socket.io, JWT, and ReactJS. This application supports real-time communication, user authentication, and secure message storage.
 
 ## Project Structure
 
